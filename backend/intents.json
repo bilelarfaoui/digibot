@@ -1,0 +1,181 @@
+{
+  "intents": [
+    {
+      "tag": "hi",
+      "patterns": [
+        "Is anyone there?",
+        "Hello",
+        "Good day",
+        "hi"
+      ],
+      "responses": [
+        "Hey :-)",
+        "hello there",
+        "Hi there, how can I help?"
+      ]
+    }, 
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+
+    {
+      "tag": "greetings",
+      "patterns": ["how are you?", "how is your day?" ],
+      "responses": [
+        "im good how how can i help?",
+        "better now",
+        "great"
+      ]
+    },
+
+    {
+      "tag": "signing up for a training",
+      "patterns": ["i want to enroll in a training!" , "how can i enroll in the training i want?"],
+      "responses": ["www.3dnetinfo.com/inscription"]
+    },
+	{
+      "tag": "Training",
+      "patterns": ["what are the trainings provided?","what can i learn at NetInfo?"],
+      "responses": ["our trainings are devided in two categories : graduated trainings and accelerated trainings, wich one are you going for?"]
+    },
+
+
+    {
+      "tag": "grad",
+      "patterns": ["graduated"],
+      "responses": ["choose from these trainings wich one you want to learn : ANIMATION 3D- BTP & BTS Approved , 3D ARCHVIZ (ARCHITECTURE 3D) ,3D TEMPS REEL, Game Art- Creation Jeu Video- BTS & BTP Approved, GAME DEV (Developpeur Jeu video), BTS PRODUCTION 3D- Approved"]
+    },
+	
+
+
+
+	{
+      "tag": "ani",
+      "patterns": ["animation,3D BTP & BTS Approved"],
+      "responses": ["www.3dnetinfo.com/formations/animation3d"]
+    },
+	{
+      "tag": "Arc",
+      "patterns": ["3D ARCHVIZ,ARCHITECTURE 3D"],
+      "responses": ["www.3dnetinfo.com/formations/architecture3d"]
+    },
+	{
+      "tag": "temp",
+      "patterns": ["3D TEMPS REEL"],
+      "responses": ["www.3dnetinfo.com/formations/3dtempsreel"]
+    },
+	{
+      "tag": "BTS",
+      "patterns": ["Game Art,Création Jeu Vidéo , BTS & BTP Approved"],
+      "responses": ["www.3dnetinfo.com/formations/game-art"]
+    },
+	{
+      "tag": "Dev",
+      "patterns": ["GAME DEV,Developpeur Jeu video"],
+      "responses": ["www.3dnetinfo.com/formations/game-dev"]
+    },
+	{
+      "tag": "bts",
+      "patterns": ["BTS PRODUCTION |3D Approved"],
+      "responses": ["www.3dnetinfo.com/formations/bts"]
+    },
+	{
+      "tag": "Acc",
+      "patterns": ["accelerated"],
+      "responses": ["choose from these trainings wich one you want to learn : photoshop , illustrator basic , illustrator advanced , indesign basic , indesign advanced , acrobat pro basic , acrobat pro advanced , after effects basic, after effects advanced , premier pro basic"]
+    },
+	{
+      "tag": "pho",
+      "patterns": ["photoshop"],
+      "responses": ["www.3dnetinfo.com/apprendre/photoshop-niveau-basique"]
+    },
+	{
+      "tag": "ill",
+      "patterns": ["illustrator basic"],
+      "responses": ["www.3dnetinfo.com/apprendre/illustrator-basique"]
+    },
+	{
+      "tag": "illu",
+      "patterns": ["illustrator advanced"],
+      "responses": ["www.3dnetinfo.com/apprendre/illustrator-niveau-avance"]
+    },
+	{
+      "tag": "ind",
+      "patterns": ["indesign basic"],
+      "responses": ["www.3dnetinfo.com/apprendre/indesign-basique-intermediaire"]
+    },
+	{
+      "tag": "inde",
+      "patterns": ["indesign advanced"],
+      "responses": ["www.3dnetinfo.com/apprendre/indesign-avance"]
+    },
+	{
+      "tag": "acro",
+      "patterns": ["acrobat pro basic"],
+      "responses": ["www.3dnetinfo.com/apprendre/acrobat-basique-intermediaire"]
+    },
+	{
+      "tag": "acrob",
+      "patterns": ["acrobat pro advanced"],
+      "responses": ["www.3dnetinfo.com/apprendre/acrobat-avance"]
+    },
+	{
+      "tag": "pre",
+      "patterns": ["premier pro basic"],
+      "responses": ["www.3dnetinfo.com/apprendre/premiere-basique"]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {
+      "tag": "about",
+      "patterns": [
+        "what is your company for?",
+        "what kind of services do you provide?"
+      ],
+      "responses": [
+        "The school is recognized by the Ministry of Professional Training and Employment. It is an academic partner, an Autodesk certification center and an Adobe certification center.",
+        "Net-Info is an art and technology school specialized in training for 3D computer graphics production, animation and video games."
+      ]
+    },
+    {
+      "tag": "contact",
+      "patterns": [
+        "let me talk to a human" , "what are the prices?" ,"is it online or not now?","when does my training start?"
+      ],
+      "responses": [
+        "for those type of informations please call us (+216) 72-230-230 if you are in nabeul or (+216) 71-904-838 if you are in tunis", " email us at contact@3dnetinfo.com"
+      ]
+    }, 
+    {
+      "tag": "payments",
+      "patterns": [
+        "Do you take credit cards?",
+        "Do you accept Mastercard?",
+        "Can I pay with Paypal?",
+        "Are you cash only?"
+      ],
+      "responses": [
+        "We accept VISA, Mastercard"
+      ]
+    },
+    {
+      "tag": "the place",
+      "patterns": [
+        "where is the company based?"
+      ],
+      "responses": [
+        " Tunis 34 , Rue Abou Baker El Bakr  1073 Montplaisir  and Nabeul 45 Av. Habib Bourguib 8000 NABEUL Tunisie "
+      ]
+    }
+  
+  ]
+}

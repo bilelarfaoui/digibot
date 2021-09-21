@@ -1,0 +1,115 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Bot</title>
+    {% load static %}
+    <link rel="stylesheet" href=" {% static 'css/chat.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+
+function haha ()  {
+
+document.getElementById("testt").addEventListener("click", function(event) {event.preventDefault()});
+const ff = document.getElementById("testt");
+ff.addEventListener("submit", handleFormSubmit);
+
+} 
+
+async function handleFormSubmit(event) {
+
+    event.preventDefault();
+
+    const form = event.currentTarget;
+
+    const url = form.action;
+    try {
+        const formData = new FormData(form);
+        const responseData = await postFormDataAsJson({ url, formData });
+        console.log({ responseData });
+    } catch (error) {
+		console.error(error);
+	}
+}
+
+
+</script>
+</head>
+
+<body>
+    <!-- CHAT BAR BLOCK -->
+    <div class="chat-bar-collapsible">
+      
+        <button id="chat-button" type="button" class="collapsible">Chat with us!
+            <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+        </button>
+
+        <div class="content">
+            
+            <div class="full-chat-block">
+               
+                <div class="outer-container">
+                    <center>  <img src="/static/netinfo.jpeg" alt="netinfo logo" width="100" length="100" class="imagee"></center>
+                    <!-- Message Container -->
+                    <div class="chat-container">
+                        <!-- Messages -->
+                        <div id="chatbox">
+                            <h5 id="chat-timestamp"></h5> 
+                         <!--   <p id="botStarterMessage" class="botText"></p> -->
+                        <form method="POST" action="" name="f" onsubmit="handleFormSubmit()">
+                          {% csrf_token %}
+                          {{ form.as_p }}
+                        <div class="input-box">
+                         <b class="test">you : </b><br><br><div class="userText" ><span>{{user}}</span> <br></div>
+                        </div>
+                      
+                        <div class="row justify-content-start">
+                         <b class="netinfo">digibot : </b><br><br><div id="" class="botText" style="width:auto ; height: auto;"><span>{{bot}}</span><br><br></div>
+                        </div>
+                      </div>
+
+                        <!-- User input box -->
+                        <div class="chat-bar-input-block">
+                            <div id="userInput">
+                              <input id="text" name="input" class="input-box" type="text" name="msg"
+                                    placeholder="Tap 'Enter' to send a message">
+                                <p></p>
+                              <script>  document.getElementById("text").addEventListener("click", function(event){
+                                event.preventDefault()})</script>
+                            </div>
+                              
+                            <div class="chat-bar-icons">
+                            
+                               <input id="testt"  name="msg" value="send"  type="submit" 
+                                  class="button" loading="lazy"> 
+                               <!-- <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                    onclick=""></i>-->
+                            </div>
+                        </div>
+
+                        <div id="chat-bar-bottom">
+                            <p></p>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+     
+    </div>
+    {% load static %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'scripts/responses.js' %}"></script>
+<script type="text/javascript" src="{% static 'scripts/chat.js'%}"></script>
+
+
+</body>
+
+</html>
